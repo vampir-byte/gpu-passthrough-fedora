@@ -110,7 +110,7 @@ If you are passing through to a macOS VM, outside of the certain steps you must 
 
 If you are thinking about passing through a GPU to macOS, it must be both supported and if you have an NVIDIA card it likely needs patched vbios (although I don't see the point of using NVIDIA as it lost support circa macOS Mojave, which has been EOL since 2021). 
 
-If you attempt to run online games, anti-cheats will likely immediately try to ban you. There are ways to get around this, however as I do not play or endorse ever touching software like that, so I've zero clue what you would need to do regarding that. Else-wise I hope this has proven some utility, if not in its total length than random snipits to troubleshoot or figure out a problem.  
+If you attempt to run online games, anti-cheats will likely immediately try to ban you. There are ways to get around this, however as I do not play or endorse ever touching software like that, I've zero clue what you would need to do regarding that. Else-wise I hope this has proven some utility, if not in its total length than random snipits to troubleshoot or figure out a problem.
 
 | Sources |                                                                                                          |
 |--------|----------------------------------------------------------------------------------------------------------|
