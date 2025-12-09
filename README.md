@@ -76,7 +76,13 @@ then run `$ sudo dracut -f` to update it officially, overwriting the initramfs.
 
 Reboot and check if it worked. Do so using `$ sudo dmesg | grep -i vfio` and `$ lspci -nnk` to see. If command one doesn't really make it clear, look at your GPU in the results of command two to see if vfio-pci took control of it e.g. `Kernel driver in use: vfio-pci`
 
-If you installed the CachyOS kernel, do make sure you selected that when you booted your system, else you will be using your kernel without ACS Override. 
+If you installed the CachyOS kernel, do make sure you selected that when you booted your system, else you will be using your kernel without ACS Override. I heavily suggest changing your default kernel to it using grubby (which is pre-installed) via the following:
+
+`sudo grubby --info=ALL | grep -E "index=|kernel="` Will show every kernel installed and their index. Take note of the index of the kernel w/ CachyOS, e.g. `/boot/vmlinuz-6.17.9-cachyos1.fc43.x86_64`. 
+
+Next run `sudo grubby --set-default-index=`, adding whatever index the CachyOS kernel was located at.
+
+Lastly check if it worked with `sudo grubby --default-index`, in my case my CachyOS kernel was located at 0, and the output was `0`, so it worked. Now everytime you boot it should boot to that index/kernel without having to select it in settings.
 
 ---
 	
